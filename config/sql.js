@@ -1,12 +1,15 @@
 import pgk from "pg";
 const { Pool } = pgk;
+import dotenv from "dotenv";
 
 const pool = new Pool({
-  host: "dpg-cj3mcut9aq0e0q00a7vg-a",
-  port: 5432,
-  Database: "devjobs_api",
-  user: "devjobs_api_user",
-  password: "9h5kJYkVzL18902mucAqzNkw4Qq0yQ89",
+  host: process.env.POSTGRE_HOST,
+  port: process.env.POSTGRE_PORT,
+  database: process.env.POSTGRE_DATABASE,
+  user: process.env.POSTGRE_USER,
+  password: process.env.POSTGRE_PASSWORD,
 });
 
-export const CreateImageTable = async () => {};
+export const CreateImageTable = async () => {
+  return await pool.query("");
+};
