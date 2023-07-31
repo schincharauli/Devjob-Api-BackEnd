@@ -10,6 +10,19 @@ const pool = new Pool({
   password: process.env.POSTGRE_PASSWORD,
 });
 
-export const CreateImageTable = async () => {
-  return await pool.query("");
+export const createImageTable = async () => {
+  return await pool.query(`
+  CREATE TABLE IF NOT EXISTS job_positions(
+    id SERIAL PRIMARY KEY, 
+    company TEXT, 
+    logo TEXT, 
+    logoBackground TEXT, 
+    position TEXT,
+    postedAt TEXT,
+    contract TEXT,
+    location TEXT,
+    website TEXT,
+    apply TEXT,
+    description TEXT,
+    requirements_content TEXT )`);
 };
