@@ -26,3 +26,5 @@ export const createImageTable = async () => {
     description TEXT,
     requirements_content TEXT )`);
 };
+
+export default pool;

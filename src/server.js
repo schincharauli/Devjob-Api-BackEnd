@@ -1,5 +1,5 @@
 import express from "express";
-import createImageTable from "./config/sql.js";
+import { createImageTable } from "./config/sql.js";
 
 const app = express();
 
