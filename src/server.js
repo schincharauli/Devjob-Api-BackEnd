@@ -16,7 +16,9 @@ async function init() {
   try {
     await createImageTable();
     serverStart();
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 init();
