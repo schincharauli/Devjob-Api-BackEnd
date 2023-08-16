@@ -4,9 +4,6 @@ import { createImageTable } from "./config/sql.js";
 const app = express();
 
 app.use("/images", express.static("public/images"));
-// app.use("/company", express.static("public/images"));
-
-// app.use();
 
 async function init() {
   try {
