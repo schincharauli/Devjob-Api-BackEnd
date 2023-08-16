@@ -5,12 +5,12 @@ const app = express();
 
 app.use("/images", express.static("public/images"));
 
-app.get("/jobs/:size/:page", (req, res) => {
-  const size = parseInt(req.params.size);
-  const page = parseInt(req.params.page);
+// app.get("/jobs/:size/:page", (req, res) => {
+//   const size = parseInt(req.params.size);
+//   const page = parseInt(req.params.page);
 
-  res.json({ size, page, jobs: fetchedJobs });
-});
+//   res.json({ size, page, jobs: fetchedJobs });
+// });
 
 async function init() {
   try {
