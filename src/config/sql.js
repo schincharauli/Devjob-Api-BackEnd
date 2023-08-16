@@ -24,6 +24,7 @@ export const createImageTable = async () => {
     website TEXT,
     apply TEXT,
     description TEXT,
+    job_positions
 )`);
 };
 
